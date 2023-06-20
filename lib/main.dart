@@ -5,7 +5,7 @@ import 'package:push_notifications/services/push_notifications_service.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  PushNotificationService.initializeApp();
+  await PushNotificationService.initializeApp();
   runApp(const MyApp());
 }
 

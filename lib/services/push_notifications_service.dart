@@ -1,6 +1,5 @@
 //sha1: 03:36:02:07:DC:2B:60:DD:4B:F0:91:1B:B4:07:A9:9F:AC:7C:73:C4
 import 'dart:async';
-
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
@@ -71,4 +70,20 @@ class PushNotificationService {
   static closedStream() {
     _messageStream.close();
   }
+
+  /*POST https://fcm.googleapis.com/v1/projects/myproject-b5ae1/messages:send HTTP/1.1
+
+Content-Type: application/json
+Authorization: Bearer ya29.ElqKBGN2Ri_Uz...HnS_uNreA
+
+{
+   "message":{
+      "token":"token_1",
+      "data":{},
+      "notification":{
+        "title":"FCM Message",
+        "body":"This is an FCM notification message!",
+      }
+   }
+}*/
 }
